@@ -9,6 +9,10 @@
   ],
   "routes": [
     {
+      "src": "/static/(.*)",
+      "dest": "clinic/static/$1"
+    },
+    {
       "src": "/(.*)",
       "dest": "clinic/wsgi.py"
     }
