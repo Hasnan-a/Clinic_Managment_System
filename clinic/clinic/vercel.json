@@ -1,0 +1,14 @@
+{
+  "builds": [
+    {
+      "src": "clinic/wsgi.py",
+      "use": "@vercel/python"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "clinic/wsgi.py"
+    }
+  ]
+}
