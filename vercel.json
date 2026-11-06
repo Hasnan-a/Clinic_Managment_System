@@ -5,17 +5,9 @@
       "src": "clinic/wsgi.py",
       "use": "@vercel/python",
       "config": { "maxLambdaSize": "15mb", "runtime": "python3.12" }
-    },
-    {
-      "src": "clinic/staticfiles/**",
-      "use": "@vercel/static"
     }
   ],
   "routes": [
-    {
-      "src": "/static/(.*)",
-      "dest": "clinic/staticfiles/$1"
-    },
     {
       "src": "/(.*)",
       "dest": "clinic/wsgi.py"
