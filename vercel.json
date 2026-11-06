@@ -2,19 +2,14 @@
   "version": 2,
   "builds": [
     {
-      "src": "clinic/wsgi.py",
-      "use": "@vercel/python",
-      "config": { "maxLambdaSize": "15mb", "runtime": "python3.12" }
+      "src": "clinic/clinic/wsgi.py",
+      "use": "@vercel/python"
     }
   ],
   "routes": [
     {
-      "src": "/static/(.*)",
-      "dest": "clinic/static/$1"
-    },
-    {
       "src": "/(.*)",
-      "dest": "clinic/wsgi.py"
+      "dest": "clinic/clinic/wsgi.py"
     }
   ]
 }
