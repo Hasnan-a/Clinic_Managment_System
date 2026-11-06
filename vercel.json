@@ -2,7 +2,7 @@
   "version": 2,
   "builds": [
     {
-      "src": "clinic/clinic/wsgi.py",
+      "src": "wsgi.py",
       "use": "@vercel/python"
     }
   ],
@@ -13,7 +13,7 @@
     },
     {
       "src": "/(.*)",
-      "dest": "clinic/clinic/wsgi.py"
+      "dest": "wsgi.py"
     }
   ]
 }
