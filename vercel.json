@@ -2,14 +2,14 @@
   "version": 2,
   "builds": [
     {
-      "src": "clinic/clinic/wsgi.py",
+      "src": "clinic/wsgi.py",
       "use": "@vercel/python"
     }
   ],
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "clinic/clinic/wsgi.py"
+      "dest": "clinic/wsgi.py"
     }
   ]
 }
